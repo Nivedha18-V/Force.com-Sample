@@ -1,0 +1,24 @@
+<apex:page controller="RedirecttoDetail_AC" action="{!displayData}" showheader="False">
+    <style>
+    .body
+    {
+    background-image:url("https://s-media-cache-ak0.pinimg.com/736x/e0/a1/a9/e0a1a99c22aecda0f45749a74be86604.jpg");
+    height:1000px;
+   }
+</style>
+    <apex:form styleClass="body">
+        <div align="Center">
+        <font size="7" color="Orange"><b>USer Informaton</b></font><br/>
+            <apex:inlineEditSupport disabled="Edit_Enable" event="onclick"/>
+          <font color="White">  
+                <p>Name</p> <apex:inputText value="{!name}" disabled="{!Edit_Enable}" /><br/>
+                <p>Email</p><apex:inputText value="{!email}" disabled="{!Edit_Enable}" /><br/>
+        <p>DOB</p><apex:inputText value="{!dob}" disabled="{!Edit_Enable}" /><br/>
+        <p>Address</p><apex:inputText value="{!address}" disabled="{!Edit_Enable}" /><br/></font>
+           <apex:commandButton value="Save" action="{!Save_M}"/>
+           <apex:commandButton value="Edit" action="{!Edit_M}"/>
+            <a href="https://c.ap4.visual.force.com/apex/FirstPage_VF?"><font color="white" size="3">
+               Logout </font></a>
+             </div>
+</apex:form>
+</apex:page>

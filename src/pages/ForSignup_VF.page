@@ -1,0 +1,39 @@
+<apex:page controller="Userinfo_AC" id="us1" showHeader="False" >
+    <apex:pageMessages />
+    <script> 
+       function validate()
+    {
+        var pwd=document.getElementById('{!$Component.uf1.pwd}').value;
+        var repwd=document.getElementById('{!$Component.uf1.rpwd}').value;
+       if(pwd != repwd)
+           {
+               alert("Password does not match");
+           }
+   }
+    
+     </script>
+    <style>
+    .background
+    {
+        background-image:url("https://0.s3.envato.com/files/198293696/preview.jpg");
+        height:1000px;
+        color:red;
+     }
+  
+    </style>
+<apex:form id="uf1" styleClass="background">
+          <b>
+              <div align="Center">
+              <font size="10" color="Orange">SignUp</font></div>
+    </b><br/>
+    <div align="Center"><b>
+        <font color="white" size="3">
+        Name<br/><apex:inputText label="Name" value="{!Name}" id="uname" /><br/><br/>
+        Password<br/><apex:inputSecret value="{!Password}" id="pwd" /><br/><br/>
+        Retype Password<br/><apex:inputSecret title="RetypePassword" id="rpwd" /><br/><br/>
+        Email<br/><apex:inputText value="{!Email}"/><br/><br/></font></b>
+        <apex:commandButton value="Save" action="{!Save_M}" />
+        <apex:commandButton value="Cancel" action="{!Cancel_M}"/>
+    </div>
+       </apex:form>
+</apex:page>

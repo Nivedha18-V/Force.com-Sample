@@ -1,0 +1,17 @@
+<apex:page controller="actionforCustomButton_AC" showHeader="False">
+    <style>
+    .body
+    {
+    background-image:url("http://hd-wall-papers.com/images/wallpapers/background-images-for-desktop/background-images-for-desktop-4.jpg");
+    height:1000px;
+        }
+    </style>
+    <apex:form styleClass="body">
+        <div align="center">
+        <font size="7" color="Orange">
+        <B>You are a new user Signup Here</B>
+        <apex:commandButton value="Signup" action="{!CustomButonAction}" /><br/><br/>
+         <b>Already Have Account</b>
+         <apex:commandButton value="login" action="{!login}" /></font></div>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page standardController="Userinfo__c">
+    <apex:form >
+        <p>UserName</p><apex:outputField value="{!Userinfo__c.Name}" label="{!Userinfo__c.Name}" />
+    </apex:form>
+</apex:page>

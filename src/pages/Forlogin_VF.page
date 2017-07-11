@@ -1,0 +1,19 @@
+<apex:page controller="RedirecttoDetail_AC" showHeader="false">
+    <apex:pageMessages />
+    <style>
+    .body
+    {
+    background-image:url("https://static.vecteezy.com/system/resources/previews/000/141/096/original/vector-pink-polygonal-background.jpg");
+    height:1000px;
+        }
+    </style>
+    <apex:form styleClass="body">
+        <div align="center">
+        <font color="White" size="10" ><b>Login</b></font>
+        <font color="skyblue" size="3">
+        <p><b>Username</b></p><apex:inputText value="{!name}"  /><br/>
+        <p><b>Password</b></p><apex:inputSecret value="{!password}" /><br/></font>
+        <apex:commandButton value="Login" action="{!RedirecttoDetail_M}" />
+        <apex:commandButton value="Cancel" action="{!Cancel_M}" /></div>
+    </apex:form>
+</apex:page>
